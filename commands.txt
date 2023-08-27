@@ -1,0 +1,49 @@
+Windows
+___________
+Create new topic 
+>bin\windows\kafka-topics.bat --create --topic user-topic --bootstrap-server localhost:9092
+
+Produce new topic 
+bin\windows\kafka-console-producer.bat --topic user-topic --bootstrap-server localhost:9092
+
+Consuming message
+bin\windows\kafka-console-consumer.bat --topic user-topic --from-beginning --bootstrap-server localhost:9092
+
+Producer configuration
+spring.kafka.producer.bootstrap-servers=localhost:9092
+spring.kafka.producer.key-serializer=org.apache.kafka.common.serialization.StringSerializer
+spring.kafka.producer.value-serializer=org.apache.kafka.common.serialization.StringSerializer
+
+
+Consumer configuration
+server.port=8081
+spring.kafka.consumer.bootstrap-servers=localhost:9092
+spring.kafka.consumer.group-id=group-id
+spring.kafka.consumer.auto-offset-reset=earliest
+spring.kafka.consumer.key-deserializer=org.apache.kafka.common.serialization.StringDeserializer
+spring.kafka.consumer.value-deserializer=org.apache.kafka.common.serialization.StringDeserializer
+
+____________________________________
+
+00:00:00 Introduction to Video
+00:03:39 What is APACHE KAFKA? With Example
+00:11:03 Why KAFKA | Understand with example(Zomato Live Location Tracking)
+00:24:05 Important Features
+00:26:46 Architecture of KAFKA
+00:33:36 Installation of APACHE KAFKA
+00:40:18 Starting servers (KAFKA and Zookeeper)
+00:46:01 Play with commands(Creating Topic, Producing Message and Consuming Mesage using Console)
+01:00:50 Understand Project UseCase 
+01:02:29 Creating Two Spring Boot Project(DeliveryBoy and EndUser app)
+01:07:04 Coding for Producing message in DeliveryBoy Service
+01:25:01 Coding for Consuming Message in EndUser services
+01:31:12 Testing App with 200K messages live.
+
+Thanks for watching
+Please subscribe for more such vidoes
+
+ 
+
+
+
+
